@@ -1,11 +1,10 @@
-<!-- well, hello there. I see you're reading my source code. Are you hiring? contact at danieljpost dot pro -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="There is nothing here for you. This is the personal website of Daniel J. Post." />
-    <title>This is danieljpost.dev - this is not for you</title>
+    <meta name="description" content="Page not found." />
+    <title>404 - not found</title>
     <style>
       html {
         overflow: hidden;
@@ -29,7 +28,6 @@
           radial-gradient(ellipse at 50% 35%, #888 0%, #555 50%, #333 100%);
         color: #6e0b0b;
       }
-      a { color: #6e0b0b; }
       @media (prefers-color-scheme: dark) {
         html { background: #000; }
         body {
@@ -38,7 +36,7 @@
             radial-gradient(ellipse at 50% 35%, #1a1a1a 0%, #080808 50%, #000 100%);
           color: #a80a0a;
         }
-        a { color: #a80a0a; }
+        main p { color: #551010; }
       }
       @keyframes changecolor {
         from {
@@ -50,9 +48,12 @@
           transform: scale(0.6);
         }
       }
+      main {
+        animation: changecolor 90s infinite alternate;
+      }
       @font-face {
         font-family: "TinyHand";
-        src: url("./font/BFTinyHand-Regular.otf") format("opentype");
+        src: url("/font/BFTinyHand-Regular.otf") format("opentype");
         font-display: swap;
       }
       main h1 {
@@ -60,8 +61,11 @@
         font-size: inherit;
         font-weight: normal;
         margin: 0;
-        padding: 1em;
-        animation: changecolor 90s infinite alternate;
+      }
+      main p {
+        font-family: monospace;
+        font-size: small;
+        color: #551010;
       }
       .blood-container {
         position: fixed;
@@ -106,7 +110,7 @@
       .blood-drop:nth-child(11) { left: 95%; animation: drip 9.2s ease-in infinite; animation-delay: 2.8s; width: 7px; height: 7px; }
       @media (prefers-reduced-motion: reduce) {
         .blood-container { display: none; }
-        main h1 { animation: none; }
+        main { animation: none; }
       }
       @keyframes drip {
         0% { top: -10px; opacity: 0; }
@@ -131,12 +135,8 @@
       <div class="blood-drop"></div>
     </div>
     <main>
-      <h1>There is nothing here for you to see.</h1>
-      <form action="https://www.paypal.com/donate" method="post" target="_top">
-          <input type="hidden" name="hosted_button_id" value="LTYJV95FUS9AQ" />
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-          <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" aria-hidden="true" />
-      </form>
+      <h1>There is really nothing here for you to see.</h1>
+      <p><script>document.write(location.href)</script> was not found.</p>
     </main>
   </body>
 </html>
