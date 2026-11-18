@@ -78,7 +78,7 @@
         width: 8px;
         height: 8px;
         background: #8b0000;
-        border-radius: 50% 50% 50% 0;
+        border-radius: 50% 0 50% 50%;
         transform: rotate(-45deg);
         box-shadow: 0 0 3px rgba(139, 0, 0, 0.8);
       }
@@ -87,10 +87,11 @@
         position: absolute;
         width: 2px;
         height: 20px;
-        background: linear-gradient(to bottom, #8b0000, transparent);
+        background: linear-gradient(to top, #8b0000, transparent);
         top: -20px;
-        left: 50%;
+        left: 100%;
         transform: translateX(-50%) rotate(45deg);
+        transform-origin: 50% 100%;
         opacity: 0.6;
       }
       .blood-drop:nth-child(1) { left: 5%; animation: drip 8s ease-in infinite; animation-delay: 0s; }
